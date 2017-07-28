@@ -13,7 +13,7 @@ $> git clone https://github.com/hug33k/Neomekit.git
 Then install needed Python library ([Neopixel](https://github.com/jgarff/rpi_ws281x.git) & [Flask](http://flask.pocoo.org/))
 
 ````sh
-$> sh install_neopixel.sh
+$> ./install_neopixel.sh
 $> pip install -r requirements.txt
 ````
 
