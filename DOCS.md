@@ -17,7 +17,7 @@ Response :
 }
 ````
 
-#### Power
+### Power
 
 ###### GET /power
 
@@ -48,7 +48,7 @@ Response :
 }
 ````
 
-#### Brightness
+### Brightness
 
 ###### GET /brightness
 
@@ -79,7 +79,7 @@ Response :
 }
 ````
 
-#### Color
+### Color
 
 ###### GET /color
 
