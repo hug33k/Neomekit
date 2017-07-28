@@ -25,7 +25,7 @@ def _convert_to_rgb(color):
 
 @_blueprint.route("/")
 def _ping():
-    return _response(200, {"pong": True})
+    return _response(200, {"status": True})
 
 
 @_blueprint_power.route("", methods=["GET"])

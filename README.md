@@ -27,7 +27,7 @@ $> sudo python server.py
 
 You can use [homebridge-neomekit](https://github.com/hug33k/homebridge-neomekit.git) to controll your LEDs via Homekit (Apple).
 
-Otherwise, you can use Neomekit API.
+Otherwise, you can use Neomekit API. ( Documentation available [here](DOCS.md) )
 
 ## FAQ
 
@@ -37,7 +37,6 @@ Because `neopixel` library needs it.
 
 ## TODO
 
-- API Doc
 - Config support
 - Daemon mode
 - Logging
