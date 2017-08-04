@@ -17,7 +17,7 @@ if __name__ == '__main__':
         "count": int(_get_var("NEOMEKIT_LENGTH", 1)),
         "pin": int(_get_var("NEOMEKIT_PIN", 18)),
         "brightness":int( _get_var("NEOMEKIT_DEFAULT_BRIGHT", 100)),
-        "color": generate_color(int(_get_var("NEOMEKIT_DEFAULT_COLOR", 16777215))),
+        "color": generate_color(None, int(_get_var("NEOMEKIT_DEFAULT_COLOR", 16777215))),
         "freq": int(_get_var("NEOMEKIT_FREQ", 800000)),
         "dma": int(_get_var("NEOMEKIT_DMA", 5)),
         "invert": bool(_get_var("NEOMEKIT_INVERT", 0)),
