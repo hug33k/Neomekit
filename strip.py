@@ -1,32 +1,13 @@
 import neopixel
 
-_default_conf = {
-    "count": 140,
-    "pin": 18,
-    "freq": 800000,
-    "dma": 5,
-    "brightness": 100,
-    "invert": False,
-    "channel": 0,
-    "strip": neopixel.ws.WS2811_STRIP_GRB,
-    "color": neopixel.Color(255, 255, 255)
-}
 _status = True
 _brightness = None
 _color = None
 strip = None
 
 
-def _merge_conf(conf, defaults):
-    result = defaults
-    for item in conf:
-        result[item] = conf[item]
-    return result
-
-
 def setup(conf):
     global strip
-    conf = _merge_conf(conf, _default_conf)
     strip = neopixel.Adafruit_NeoPixel(conf["count"], conf["pin"], conf["freq"], conf["dma"], conf["invert"], conf["brightness"], conf["channel"], conf["strip"])
     strip.begin()
     set_brightness(conf["brightness"])

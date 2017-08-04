@@ -1,12 +1,12 @@
 from flask import Blueprint, Response, request
 import json
 import strip
+import misc
 
 _blueprint = Blueprint("API", __name__)
 _blueprint_power = Blueprint("Power", __name__)
 _blueprint_color = Blueprint("Color", __name__)
 _blueprint_bright = Blueprint("Brightness", __name__)
-
 
 def _response(status, body):
     return Response(response=json.dumps(body), mimetype="application/json", status=status)
@@ -14,13 +14,6 @@ def _response(status, body):
 
 def _get_body():
     return json.loads(request.data)
-
-
-def _convert_to_rgb(color):
-    blue = color % 256
-    green = color / 256 % 256
-    red = color / 256 / 256 % 256
-    return red, green, blue
 
 
 @_blueprint.route("/")
@@ -42,7 +35,7 @@ def _set_power():
 
 @_blueprint_color.route("", methods=["GET"])
 def _get_color():
-    red, green, blue = _convert_to_rgb(strip.get_color())
+    red, green, blue = misc.convert_to_rgb(strip.get_color())
     return _response(200, {"red": red, "green": green, "blue": blue})
 
 
@@ -51,7 +44,7 @@ def _set_color():
     body = _get_body()
     print(body)
     strip.set_color_rgb(body["red"], body["green"], body["blue"])
-    red, green, blue = _convert_to_rgb(strip.get_color())
+    red, green, blue = misc.convert_to_rgb(strip.get_color())
     return _response(200, {"red": red, "green": green, "blue": blue})
 
 
