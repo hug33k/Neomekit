@@ -24,6 +24,7 @@ $> sudo python server.py
 OR
 $> sudo -E python server.py
 ````
+
 ( `-E` allows you to export your environment, needed because of `sudo` )
 
 ## How do I use it ?
@@ -40,12 +41,13 @@ Otherwise, you can use Neomekit API. ( Documentation available [here](DOCS.md) )
 
 ##### Why do I need to use `-E` to use my environment ?
 
-- Since we're using `sudo` to launch the server, we won't have access to __your__ environment but __root__'s environment.
+- Since we're using `sudo` to launch the server, we won't have access to __your__ environment but __root__'s environment.<br/>
 If you want to use yours, you need to export it with `-E` flag.
 
 ##### How can I configure my LEDs ?
 
-- You can check [here](DOCS.md) in ___Config___ section.
+- You can check [here](DOCS.md) in ___Config___ section.<br/>
+To add variable to your environment, you can do `export NEOMEKIT_key=value` ( It will only works for current session) or you can write previous command into you `.bashrc` ( If you're using `bash` ).
 
 ## TODO
 
