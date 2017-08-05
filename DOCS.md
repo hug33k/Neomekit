@@ -16,9 +16,6 @@
 | `NEOMEKIT_INVERT` | Int (Bool as Int) | LED signal inversion | 0 (False) |
 | `NEOMEKIT_CHANNEL` | Int | LED PWM channel | 0 |
 | `NEOMEKIT_STRIP` | Int | LED strip type ( List available below ) | 1050624 ( WS2811_STRIP_RGB ) |
-| `` |  |  |  |
-| `` |  |  |  |
-| `` |  |  |  |
 
 ##### `NEOMEKIT_STRIP` types
 
