@@ -53,3 +53,4 @@ To add variable to your environment, you can do `export NEOMEKIT_key=value` ( It
 
 - Daemon mode
 - Logging
+- Scenarios
